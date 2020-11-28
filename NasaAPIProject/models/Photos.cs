@@ -18,8 +18,8 @@ namespace NasaAPIProject
         [JsonProperty("img_src")]
         public string img_src { get; set; }
 
-        [JsonProperty("earthdate")]
-        string earthdate { get; set; }
+        [JsonProperty("earth_date")]
+        public string earthdate { get; set; }
 
         [JsonProperty("camera")]
         Camera camera { get; set; }

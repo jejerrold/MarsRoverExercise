@@ -16,9 +16,14 @@ namespace NasaAPIProject
         static async Task MainAsync(string[] args)
         {
             MarsRoverAPI marsRoverAPI = new MarsRoverAPI();
+           
             Dates dates = new Dates();
-            var photos =  await marsRoverAPI.getMarsRoverPhotos(dates.getDates());
-            await marsRoverAPI.DownloadMarsRovePhotos(photos);
+            var selecteddates = dates.getDates();
+            var photos =  await marsRoverAPI.getMarsRoverPhotos(selecteddates);
+           // await marsRoverAPI.DownloadMarsRovePhotos(photos);
+            MarsRoverHtml marsRoverHtml = new MarsRoverHtml(photos, selecteddates);
+            marsRoverHtml.CreateMarsRoverWebPage();
+            System.Diagnostics.Process.Start(String.Format("ViewImagesTest.html"));
         }
     }
 }

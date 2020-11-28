@@ -1,100 +1,49 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-    <meta charset="utf-8" />
+    <meta charset='utf-8' />
     <title></title>
-    <script src="scripts/jquery.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/slick.min.js"></script>
-    <link href="styles/bootstrap.min.css" rel="stylesheet" />
-    <link href="styles/slick.css" rel="stylesheet" />
-    <link href="styles/slick-theme.css" rel="stylesheet" />
-    <style type="text/css">
-
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .slider {
-            width: 50%;
-            margin: 100px auto;
-        }
-
-        .slick-slide {
-            margin: 0px 20px;
-        }
-
-            .slick-slide img {
-                width: 100%;
-            }
-
-        .slick-prev:before,
-        .slick-next:before {
-            color: black;
-        }
-
-
-        .slick-slide {
-            transition: all ease-in-out .3s;
-            opacity: .2;
-        }
-
-        .slick-active {
-            opacity: .5;
-        }
-
-        .slick-current {
-            opacity: 1;
-        }
-    </style>
+    <script src='scripts/jquery.js'></script>
+    <script src='scripts/bootstrap.min.js'></script>
+    <script src='scripts/slick.min.js'></script>
+    <link href='styles/bootstrap.min.css' rel='stylesheet' />
+    <link href='styles/slick.css' rel='stylesheet' />
+    <link href='styles/slick-theme.css' rel='stylesheet' />
+    <link href="styles/custom.css" rel="stylesheet" />
 </head>
 <body>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
+    <nav class='navbar navbar-default'>
+        <div class='container-fluid'>
+            <div class='navbar-header'>
+                <a class='navbar-brand' href='#'>
                     Mars Rover Gallery
                 </a>
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">Panel heading without title</div>
-            <div class="panel-body">
-                <section class="center slider">
+    <div class='container'>
+        <div class='panel panel-default'>
+            <div class='panel-heading'>Panel heading without title</div>
+            <div class='panel-body'>
+                <section class='center slider'>
                     <div>
-                        <img src="photos/FRB_581260549EDR_F0701752FHAZ00341M_.jpg">
+                        <img src='photos/FRB_581260549EDR_F0701752FHAZ00341M_.jpg'>
                     </div>
                     <div>
-                        <img src="photos/NLB_521687638EDR_D0551864TRAV00471M_.jpg">
+                        <img src='photos/NLB_521687638EDR_D0551864TRAV00471M_.jpg'>
                     </div>
                     <div>
-                        <img src="photos/NLB_521687638EDR_D0551864TRAV00471M_.jpg">
+                        <img src='photos/NLB_521687638EDR_D0551864TRAV00471M_.jpg'>
                     </div>
-                    
+
                 </section>
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).on('ready', function () {
-            $(".center").slick({
-                dots: true,
-                infinite: true,
-                centerMode: true,
-               
-                slidesToScroll: 3
-            });
-        });
-    </script>
+
+    <script src="scripts/slickcustom.js"></script>
 </body>
 
 </html >

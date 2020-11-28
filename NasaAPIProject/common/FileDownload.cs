@@ -24,10 +24,11 @@ namespace NasaAPIProject
                 string outputFolder = String.Format(filefolder + "\\" + filename);
                 await client.DownloadFileTaskAsync(new Uri(Url), outputFolder.Replace(@"\\", @"\"));
                 Console.WriteLine("File {0} download completed. \n", filename);
+                client.Dispose();
             }
         }
 
-        private string getFileName(string url)
+        public string getFileName(string url)
         {
            
             Uri uri = new Uri(url);

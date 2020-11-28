@@ -50,7 +50,7 @@
     <Compile Include="common\ApiServices.cs" />
     <Compile Include="common\Constant.cs" />
     <Compile Include="common\FileDownload.cs" />
-    <Compile Include="common\Html.cs" />
+    <Compile Include="common\MarsRoverHtml.cs" />
     <Compile Include="services\MarsRoverAPI.cs" />
     <Compile Include="common\ReadFiles.cs" />
     <Compile Include="Dates.cs" />
@@ -102,7 +102,13 @@
     <Content Include="Dates.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\slickcustom.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="styles\ajax-loader.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="styles\custom.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="styles\fonts\slick.svg">
