@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +11,23 @@ namespace NasaAPIProject
     {
         List<Photos> photos = new List<Photos>();
         List<string> dates = new List<string>();
+        string htmlFile;
         public MarsRoverHtml(List<Photos> loadphotos, List<string> searchdates)
         {
             photos = loadphotos;
             dates = searchdates;
+            htmlFile = "MarsRover" + GetTimestamp(DateTime.Now) + ".html";
         }
 
         public void CreateMarsRoverWebPage()
         {
+            Console.WriteLine("Creating HTML File....");
             string Html = Header();
             Html += Body();
             Html += "</html>";
+            Console.WriteLine("HTML File Completed");
+            OpenHTML(Html);
+           
         }
 
         private string Header()
@@ -82,6 +89,19 @@ namespace NasaAPIProject
                 sections += "</div>";
             }
             return sections;
+        }
+
+        private void OpenHTML(string html)
+        {
+            Console.WriteLine("Opening the file..");
+            File.WriteAllText(htmlFile, html);
+            System.Diagnostics.Process.Start(String.Format(htmlFile));
+            Console.WriteLine("HTML File was opened.");
+        }
+
+        private  String GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyyMMddHHmmssffff");
         }
     }
 }

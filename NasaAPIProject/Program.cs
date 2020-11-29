@@ -20,10 +20,11 @@ namespace NasaAPIProject
             Dates dates = new Dates();
             var selecteddates = dates.getDates();
             var photos =  await marsRoverAPI.getMarsRoverPhotos(selecteddates);
-           // await marsRoverAPI.DownloadMarsRovePhotos(photos);
+            await marsRoverAPI.DownloadMarsRovePhotos(photos);
             MarsRoverHtml marsRoverHtml = new MarsRoverHtml(photos, selecteddates);
             marsRoverHtml.CreateMarsRoverWebPage();
-            System.Diagnostics.Process.Start(String.Format("ViewImagesTest.html"));
+            Console.ReadLine();
+
         }
     }
 }

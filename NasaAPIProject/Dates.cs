@@ -19,8 +19,16 @@ namespace NasaAPIProject
             var mylist = readFiles.readtxtFileLines(filePath);
             foreach (var item in mylist)
             {
-                selectedDates.Add(Convert.ToDateTime(item).ToString("yyyy-MM-dd"));
-            }
+                DateTime temp;
+                if (DateTime.TryParse(item, out temp))
+                {
+                    selectedDates.Add(Convert.ToDateTime(item).ToString("yyyy-MM-dd"));
+                }
+                else
+                {
+                    Console.WriteLine(String.Format("{0} is invalid date.", item));
+                }
+             }
             return selectedDates;
         }
     }
