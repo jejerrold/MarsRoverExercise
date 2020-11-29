@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  nasaapiproject:
+    image: ${DOCKER_REGISTRY-}nasaapiproject
+    build:
+      context: .
+      dockerfile: NasaAPIProject/Docker/Dockerfile
+    ports:
+      - "192.168.99.100:2376"
