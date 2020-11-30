@@ -8,6 +8,6 @@
 - Clone this project then run/build using Visual Studio
 
 # Usage
-- Extract the output folder in your local folder then run the NasaAPIProject.exe file
+- Extract the output zip file in your local folder then run the NasaAPIProject.exe file
 - For the inputs, you can enter dates in Dates.txt file.
 
